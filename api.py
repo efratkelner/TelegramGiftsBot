@@ -11,7 +11,7 @@ def insert(gender):
     querystring = {"keyword": gender, "country": "US", "page": "1"}
 
     headers = {
-        'x-rapidapi-key': "5a487db749msh4eec802c6020d5ep18ce7ejsn5ff4cf707d21",
+        'x-rapidapi-key': "",
         'x-rapidapi-host': "amazon24.p.rapidapi.com"
     }
 

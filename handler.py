@@ -44,9 +44,8 @@ def index():
     return 'Server is running'
 
 
-TOKEN = '1994894709:AAEgj5TTO3K8jAEQxTvc5Hms7IKLl_X0L4w'
-TELEGRAM_INIT_WEBHOOK_URL = 'https://api.telegram.org/bot{}/setWebhook?url=https://a52b2e6262cf.ngrok.io/message'.format(
-    TOKEN)
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_INIT_WEBHOOK_URL = os.getenv("TELEGRAM_WEBHOOK_URL").format(TOKEN)
 requests.get(TELEGRAM_INIT_WEBHOOK_URL)
 
 string_list = {"Name": "John", "Language": "Python", "API": "pyTelegramBotAPI"}

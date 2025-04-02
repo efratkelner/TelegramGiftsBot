@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request
 import requests
 import controller
@@ -13,8 +14,8 @@ def index():
     """
     return 'Server is running'
 
-TOKEN = 'C:\Users\user\Desktop\telegram_bot\TelegramToken'
-TELEGRAM_INIT_WEBHOOK_URL = 'https://api.telegram.org/bot{}/setWebhook?url=https://f4abe3837480.ngrok.io/message'.format(TOKEN)
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_INIT_WEBHOOK_URL = os.getenv("TELEGRAM_WEBHOOK_URL").format(TOKEN)
 requests.get(TELEGRAM_INIT_WEBHOOK_URL)
 
 

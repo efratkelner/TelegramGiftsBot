@@ -10,7 +10,7 @@ history_numbers_table = db.table('history')
 class history:
     """
     Represents commands history
-    :attribute number: the number that entered by the user in the request
+    :attribute number: the number that was entered by the user in the request
     :attribute amount: the number of times this number has appeared in the bot history
     """
     number: int
